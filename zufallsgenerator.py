@@ -57,17 +57,31 @@ while (eingabe != befehl3 or befehl2 or befehl1):
     
     elif (eingabe == befehl3):
         
-        print("5")
-        sleep(1)
-        print("4")
-        sleep(1)
-        print("3")
-        sleep(1)
-        print("2")
-        sleep(1)
-        print("1")
-        sleep(1)
+        spanne = len(names)
         
+        while spanne != 2:
+            aussuche = random.choice(names)
+            print("5")
+            sleep(0.5)
+            print("4")
+            sleep(0.5)
+            print("3")
+            sleep(0.5)
+            print("2")
+            sleep(0.5)
+            print("1")
+            sleep(0.5)
+            print(aussuche, "ist es NICHT!")
+            names.remove(aussuche)
+            spanne = spanne - 1
+        
+        vi1 = names[0]
+        vi2 = names[1]
+        
+        print("...............")
+        sleep(1)
+        print("Jetzt sind nur noch", vi1, "und", vi2, "im Pott!")
+        sleep(5)
         print(random.choice(names), "ist der Random Wert!")
         
         break
