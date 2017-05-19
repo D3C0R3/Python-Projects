@@ -23,7 +23,7 @@ while (eingabe != befehl3 or befehl2 or befehl1):
         
         print(names)
         
-        while grenze < 5:
+        while grenze < 10:
             inp = int(input("Moechten Sie noch einen Wert hinzufuegen [1=Ja/2=Nein]?"))
               
             if (inp == m1):
@@ -81,6 +81,7 @@ while (eingabe != befehl3 or befehl2 or befehl1):
         print("...............")
         sleep(1)
         print("Jetzt sind nur noch", vi1, "und", vi2, "im Pott!")
+        print("...............")
         sleep(5)
         print(random.choice(names), "ist der Random Wert!")
         
