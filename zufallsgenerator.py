@@ -2,19 +2,21 @@ import random
 from time import sleep
 names = []
 eingabe = 0
-befehl1 = 1
-befehl2 = 2
-befehl3 = 3
-inp = 0
-m1 = 1
-m2 = 2
 grenze = 0
+inp = 0
 
-while (eingabe != befehl3 or befehl2 or befehl1):
+print("Zu Anfang befinden sich keine Werte in der Liste! Adden Sie zuerst 2 Werte um den Vorgang zu starten!")
+uno = input("Geben Sie den ersten Wert ein: ")
+names.append(uno)
+dos = input("Geben Sie den zweiten Wert ein: ")
+names.append(dos)
+print("Ihre Liste beinhaltet nun", names[0], "und", names[1])
+
+while (eingabe != 3 or 2 or 1):
     print("Optionen:\n 1 = Wert hinzufuegen\n 2 = Wert entfernen\n 3 = Den Zufall entscheiden lassen")
     eingabe = int(input("Was wollen Sie tun?: "))
     
-    if (eingabe == befehl1):        
+    if (eingabe == 1):        
         
         print("Hier koennen Sie die Werte hinzufuegen: ")
         newn = input("Geben Sie einen neuen Wert ein: ")
@@ -26,7 +28,7 @@ while (eingabe != befehl3 or befehl2 or befehl1):
         while grenze < 10:
             inp = int(input("Moechten Sie noch einen Wert hinzufuegen [1=Ja/2=Nein]?"))
               
-            if (inp == m1):
+            if (inp == 1):
                 print("Hier koennen Sie die Werte hinzufuegen: ")
                 newn = input("Geben Sie einen neuen Wert ein: ")
         
@@ -36,7 +38,7 @@ while (eingabe != befehl3 or befehl2 or befehl1):
                 grenze = grenze + 1 
                 continue
              
-            elif (inp == m2):
+            elif (inp == 2):
                 print("Ihr Liste beinhaltet nun ", len(names), "Werte!")
                 break
                 
@@ -44,7 +46,7 @@ while (eingabe != befehl3 or befehl2 or befehl1):
                 print("Ungueltige Eingabe!")
                 continue        
     
-    elif (eingabe == befehl2):
+    elif (eingabe == 2):
         
         print("Hier koennen Sie Werte entfernen: ")
         out = input("Welchen Wert moechten Sie entfernen?: ")
@@ -55,7 +57,7 @@ while (eingabe != befehl3 or befehl2 or befehl1):
         print("Ihr Liste beinhaltet nun ", len(names), "Werte!")
         continue
     
-    elif (eingabe == befehl3):
+    elif (eingabe == 3):
         
         spanne = len(names)
         
@@ -75,12 +77,9 @@ while (eingabe != befehl3 or befehl2 or befehl1):
             names.remove(aussuche)
             spanne = spanne - 1
         
-        vi1 = names[0]
-        vi2 = names[1]
-        
         print("...............")
         sleep(1)
-        print("Jetzt sind nur noch", vi1, "und", vi2, "im Pott!")
+        print("Jetzt sind nur noch", names[0], "und", names[1], "im Pott!")
         print("...............")
         sleep(5)
         print(random.choice(names), "ist der Random Wert!")
